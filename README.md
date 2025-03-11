@@ -29,7 +29,8 @@ provider "aws" {
 }
 
 module "my_app_ecr_repository" {
-  source = "github.com/josersanvil/terraform_modules/modules/aws/ecr_repository"
+  # Provide the module in this repo as a source:
+  source = "github.com/josersanvil/terraform_modules//modules/aws/ecr_repository"
   repository_name = "my_app"
 }
 ```
@@ -48,3 +49,5 @@ Install the pre-commit hooks with:
 ```sh
 pre-commit install --install-hooks
 ```
+
+See the [modules documentation](./modules/README.md) for instructions on how to write the modules.
